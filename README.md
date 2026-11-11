@@ -1,16 +1,28 @@
-# React + Vite
+# MEHFIL
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+MEHFIL is a React frontend for student event discovery and organizer portals. It is built with React and Vite.
 
-Currently, two official plugins are available:
+## Getting started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Install dependencies and start the development server:
 
-## React Compiler
+```sh
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Other available scripts:
 
-## Expanding the Oxlint configuration
+```sh
+npm run lint
+npm run build
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Demo limitations
+
+This project currently uses browser storage and mock authentication for demo behavior. Student registrations and organizer data are local and are not backed by a server. Frontend role guards are not security controls.
+
+Student QR passes contain local demo references only. They are not valid for event entry, and QR check-in is not connected to a verification or attendance backend.
+
+See [Role-based portals](./docs/ROLE-BASED-PORTALS.md) for frontend behavior and production backend requirements, and [QR check-in](./docs/QR-CHECK-IN.md) for pass and check-in details.
