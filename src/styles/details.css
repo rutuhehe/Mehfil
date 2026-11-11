@@ -1,0 +1,148 @@
+.details-page {
+  padding: 2rem 0 3rem;
+}
+
+.detail-cover {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.cover-art {
+  min-height: 300px;
+  background: var(--brand-gradient);
+  border-radius: 28px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cover-side {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.detail-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.info-panel,
+.booking-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1.25rem;
+}
+
+.tab-panel {
+  margin-top: 1rem;
+}
+
+.detail-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.detail-tabs button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-soft);
+  border-radius: 999px;
+  min-height: 36px;
+  padding: 0.4rem 0.8rem;
+}
+
+.detail-tabs button.active {
+  background: var(--surface-2);
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+.meta-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.meta-row {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.meta-row strong {
+  min-width: 120px;
+  color: var(--ink-soft);
+}
+
+.booking-panel {
+  position: sticky;
+  top: 88px;
+}
+
+.mobile-bar {
+  display: none;
+}
+
+.similar-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 940px) {
+  .detail-cover,
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-panel {
+    position: static;
+  }
+
+  .mobile-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--surface);
+    backdrop-filter: blur(14px);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    border-top: 1px solid var(--line);
+    z-index: 50;
+  }
+}
+
+@media (max-width: 720px) {
+  .cover-art {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .similar-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
